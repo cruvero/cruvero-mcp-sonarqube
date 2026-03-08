@@ -1,0 +1,132 @@
+{
+  "agents": [
+    {
+      "role": "Cruvero Plan Architect v2",
+      "promptVersion": "v2",
+      "kbRefs": [
+        "github.com/cruvero/cruvero-mcp-k8s@dev",
+        "SonarQube API docs v10+ Community",
+        "http://sonar.dev.gchinfo.com/"
+      ]
+    },
+    {
+      "role": "Go Developer",
+      "promptVersion": "v1",
+      "kbRefs": [
+        "mcp-go v0.43.2",
+        "go.opentelemetry.io/otel"
+      ]
+    },
+    {
+      "role": "Helm Operator",
+      "promptVersion": "v1",
+      "kbRefs": [
+        "charts/mcp-k8s",
+        "ArgoCD values"
+      ]
+    }
+  ],
+  "auditPrompts": {
+    "acceptanceCriteria": "docs/AUDIT/acceptance-criteria.md",
+    "phase-1": "docs/AUDIT/phase-audit-1.md",
+    "phase-2": "docs/AUDIT/phase-audit-2.md",
+    "phase-3": "docs/AUDIT/phase-audit-3.md",
+    "phase-4": "docs/AUDIT/phase-audit-4.md",
+    "phase-5": "docs/AUDIT/phase-audit-5.md",
+    "phase-6": "docs/AUDIT/phase-audit-6.md",
+    "riskMatrix": "docs/AUDIT/risk-matrix.md"
+  },
+  "createdAt": "2026-03-08T16:06:40Z",
+  "dependencyGraph": [
+    {
+      "from": "PHASE1 Scaffold+Config",
+      "to": "PHASE1A SonarManager",
+      "risk": 0.1
+    },
+    {
+      "from": "PHASE1A SonarManager",
+      "to": "PHASE2 CoreReadTools",
+      "risk": 0.2
+    },
+    {
+      "from": "PHASE2 CoreReadTools",
+      "to": "PHASE2A IssuesHotspotsRead",
+      "risk": 0.1
+    },
+    {
+      "from": "PHASE2A IssuesHotspotsRead",
+      "to": "PHASE3 WriteTools",
+      "risk": 0.3
+    },
+    {
+      "from": "PHASE3 WriteTools",
+      "to": "PHASE3A QualityGatesProfiles",
+      "risk": 0.2
+    },
+    {
+      "from": "PHASE3A QualityGatesProfiles",
+      "to": "PHASE4 Destructive+Polish",
+      "risk": 0.4
+    },
+    {
+      "from": "PHASE4 Destructive+Polish",
+      "to": "PHASE5 Gateway+Health",
+      "risk": 0.2
+    },
+    {
+      "from": "PHASE5 Gateway+Health",
+      "to": "PHASE6 Helm+ArgoCD",
+      "risk": 0.1
+    },
+    {
+      "from": "PHASE6 Helm+ArgoCD",
+      "to": "PHASE7 Bulk+RBAC",
+      "risk": 0.3
+    },
+    {
+      "from": "PHASE7 Bulk+RBAC",
+      "to": "PHASE8 CI/CD+Docs",
+      "risk": 0.1
+    },
+    {
+      "from": "PHASE8 CI/CD+Docs",
+      "to": "PHASE9 MultiTenantTelemetry",
+      "risk": 0.5
+    }
+  ],
+  "knowledgeBases": [
+    "ArgoCD values",
+    "SonarQube API docs v10+ Community",
+    "charts/mcp-k8s",
+    "github.com/cruvero/cruvero-mcp-k8s@dev",
+    "go.opentelemetry.io/otel",
+    "http://sonar.dev.gchinfo.com/",
+    "mcp-go v0.43.2"
+  ],
+  "modelOverride": "grok-code-fast-1",
+  "phasePlans": {
+    "phase-1": "docs/PHASE_PLANS/phase-1.md",
+    "phase-2": "docs/PHASE_PLANS/phase-2.md",
+    "phase-3": "docs/PHASE_PLANS/phase-3.md",
+    "phase-4": "docs/PHASE_PLANS/phase-4.md",
+    "phase-5": "docs/PHASE_PLANS/phase-5.md",
+    "phase-6": "docs/PHASE_PLANS/phase-6.md"
+  },
+  "planId": "af8b082b-e6b3-4913-bbe0-b2deb848c06a",
+  "promptVersions": {
+    "Cruvero Plan Architect v2": "v2",
+    "Go Developer": "v1",
+    "Helm Operator": "v1"
+  },
+  "referenceRepo": "cruvero/cruvero-mcp-k8s@dev",
+  "referenceRepos": [
+    {
+      "branch": "dev",
+      "id": "cruvero__cruvero-mcp-k8s@dev",
+      "indexedTokens": 132241,
+      "owner": "cruvero",
+      "repo": "cruvero-mcp-k8s",
+      "slot": 1
+    }
+  ]
+}
