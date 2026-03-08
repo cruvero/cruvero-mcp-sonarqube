@@ -1,11 +1,11 @@
 # Phase Audit 3
 
 ## Target
-- Phase 3: Core Services & Interfaces Segment A Segment B
+- Phase 2A: IssuesHotspotsRead & Phase 3: WriteTools
 
 ## Audit Prompt
 ```text
-Audit Phase 3: Core Services & Interfaces Segment A Segment B against acceptance criteria, risk controls, and deterministic behavior.
+Audit Phase 2A IssuesHotspotsRead & Phase 3 WriteTools against acceptance criteria, risk controls, and deterministic behavior.
 Return findings ordered by severity with explicit pass/fail gate decision and required remediations.
 ```
 
@@ -14,3 +14,8 @@ Return findings ordered by severity with explicit pass/fail gate decision and re
 - [ ] Validation commands executed and captured
 - [ ] Risks assessed and mitigations documented
 - [ ] Ready/not-ready gate decision recorded
+
+## Findings
+
+## Gate Decision
+Pending

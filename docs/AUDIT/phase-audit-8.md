@@ -1,11 +1,11 @@
-# Phase Audit 2
+# Phase Audit 8
 
 ## Target
-- Phase 1A: SonarManager & Phase 2: CoreReadTools
+- Phase 8: CI/CD+Docs
 
 ## Audit Prompt
 ```text
-Audit Phase 1A SonarManager & Phase 2 CoreReadTools against acceptance criteria, risk controls, and deterministic behavior.
+Audit Phase 8 CI/CD+Docs against acceptance criteria, risk controls, and deterministic behavior.
 Return findings ordered by severity with explicit pass/fail gate decision and required remediations.
 ```
 

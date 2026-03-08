@@ -1,11 +1,11 @@
 # Phase Audit 6
 
 ## Target
-- Phase 6: Core Services & Interfaces Segment B Segment B
+- Phase 6: Helm+ArgoCD
 
 ## Audit Prompt
 ```text
-Audit Phase 6: Core Services & Interfaces Segment B Segment B against acceptance criteria, risk controls, and deterministic behavior.
+Audit Phase 6 Helm+ArgoCD against acceptance criteria, risk controls, and deterministic behavior.
 Return findings ordered by severity with explicit pass/fail gate decision and required remediations.
 ```
 
@@ -14,3 +14,8 @@ Return findings ordered by severity with explicit pass/fail gate decision and re
 - [ ] Validation commands executed and captured
 - [ ] Risks assessed and mitigations documented
 - [ ] Ready/not-ready gate decision recorded
+
+## Findings
+
+## Gate Decision
+Pending
