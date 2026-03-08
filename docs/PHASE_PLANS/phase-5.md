@@ -1,13 +1,13 @@
 # Phase 5: Gateway+Health
 
 ## Overview
-Gateway service, health/heartbeat.
+Implement gateway service, registration, heartbeat, health checks.
 
 ## Why Now
-Precedes PHASE6 (risk 0.2).
+Follows PHASE4 (risk 0.2); precedes PHASE6 (risk 0.1).
 
 ## Detailed Task List
 | Task ID | Task | Owner/Agent | Depends On | Deliverable | Validation Command |
 |---|---|---|---|---|---|
-| P5-T01 | Fork charts/mcp-sonarqube/; values.yaml sonar envs | Helm Operator | phase-4 | Chart files | `helm lint charts/mcp-sonarqube` |
-| P5-T02 | internal/gateway/service.go register/heartbeat/healthz | Go Developer | P5-T01 | Gateway funcs | `curl -f http://localhost:8080/healthz` |
+| P5-T01 | cmd/gateway/main.go: MCP server mux (/mcp), tool registry | Go Developer | phase-4 | main.go + health endpoints | `go build ./cmd/gateway && ./gateway --health` |
+| P5-T02 | internal/gateway/service.go: RegisterTools(), Heartbeat(), Healthz() with OTEL | Go Developer | P5-T01 | service.go + tests | `go test -v ./internal/gateway && curl -f localhost:8080/healthz` |
